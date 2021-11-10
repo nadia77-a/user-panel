@@ -1,5 +1,6 @@
 import axios from "axios";
 import { endpoint, handleError } from "config";
+import { fetchWrapper } from 'utils';
 
 export const instanceAxios = axios.create({
   baseURL: endpoint,
@@ -43,4 +44,20 @@ export const getDataReq = (param1, param2) => {
       },
     })
     .catch((error) => ({ error }));
+};
+
+
+export const getLogin = (username, password) => {
+  return fetchWrapper(`${endpoint}/`, {
+    body: {
+      userid: username,
+      pwd: password,
+      cmd: 'login',
+      // skinname: Bconfig.name,
+    },
+  });
+};
+
+export const requestLogOut = token => {
+  return fetchWrapper(`${endpoint}/logout?token=${token}`);
 };

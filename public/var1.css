@@ -1,0 +1,16 @@
+html {
+  --accent-bg: #0078ff;
+  --accent-txt: #fff;
+  --circle-bg: #12dfff;
+
+  --header-bg: #fff;
+  --header-txt: #3c4349;
+
+  --footerTop-bg: #0078ff;
+  --footerTop-txt: #fff;
+
+  --second-bg: #f7faff;
+  --second-txt: #3c4349;
+
+  --menu-presto: #12dfff;
+}

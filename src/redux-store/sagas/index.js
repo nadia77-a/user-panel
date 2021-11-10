@@ -7,6 +7,8 @@ export default function* rootSaga() {
   yield all([
     // AUTH
     ...[takeLatest("GET_DATA", AuthGenerators.getData)],
+    takeLatest('GET_LOGIN', AuthGenerators.getLogin),
+    takeLatest('LOG_OUT', AuthGenerators.logOut),
     // MAIN
   ]);
 }
