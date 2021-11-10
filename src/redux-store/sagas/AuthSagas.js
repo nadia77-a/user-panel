@@ -1,4 +1,4 @@
-import { put, call, delay, select } from "redux-saga/effects";
+import { put, call, select } from "redux-saga/effects";
 import AuthActions from "../models/auth";
 
 import * as AuthReq from "services/auth";

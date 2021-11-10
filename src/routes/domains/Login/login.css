@@ -132,14 +132,6 @@
   color: var(--accent-bg);
 }
 
-.verifyAcc {
-  width: 100%;
-  max-width: 400px;
-  height: 400px;
-  text-align: center;
-  text-transform: capitalize;
-}
-
 .hasError {
   text-align: center;
   font-size: 15px;
@@ -157,60 +149,7 @@
   margin-top: 4px;
 }
 
-.leftLogin {
-  height: 100vh;
-  width: 700px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-position: center;
-  background-size: contain;
-  pointer-events: none;
-  color: var(--accent-txt);
-}
-
-.leftLogin:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  mix-blend-mode: multiply;
-}
-
-.leftLogin:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--accent-bg);
-  z-index: 0;
-}
-
-.leftLogin .logoLogin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -20%);
-          transform: translate(-50%, -20%);
-  width: 160px;
-}
-
-@media (max-width: 1150px) {
-  .leftLogin {
-    width: 532px;
-    background-repeat: no-repeat;
-  }
-}
-
 @media (max-width: 950px) {
-  .leftLogin {
-    display: none;
-  }
   .login {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
