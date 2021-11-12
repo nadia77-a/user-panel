@@ -14,7 +14,6 @@ const loginErrorCodes = {
 
 export function* getLogin({ username, password }) {
   let response = yield call(AuthReq.getLogin, username, password);
-  // const socket = yield select(state => state.socket.socketInstance);
 
   if (response) {
     if (response.result) {
@@ -23,13 +22,6 @@ export function* getLogin({ username, password }) {
       localStorage.setItem('user', JSON.stringify(response));
       yield put(AuthActions.setUserData(response));
       notifySucces(t`Successfully logged in!!`);
-
-      // let socketSubscribe = {
-      //   action: 'subscribe',
-      //   topic: `c_bal_${response.id}`,
-      // };
-
-      // socket?.emmit?.(JSON.stringify(socketSubscribe));
     } else {
       notifyError(loginErrorCodes[response.msg] || loginErrorCodes['default']);
     }
@@ -38,14 +30,6 @@ export function* getLogin({ username, password }) {
 
 export function* logOut() {
   const user = yield select(state => state.auth.user);
-  const socket = yield select(state => state.socket.socketInstance);
-
-  let socketUnSubscribe = {
-    action: 'unsubscribe',
-    topic: `c_bal_${user.id}`,
-  };
-
-  // socket?.emmit?.(JSON.stringify(socketUnSubscribe));
 
   yield call(AuthReq.requestLogOut, user.token);
 

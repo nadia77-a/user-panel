@@ -1,0 +1,56 @@
+header {
+  background-color: var(--accent-bg);
+  color: var(--accent-txt);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  height: 70px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 18px 20px -22px #000;
+          box-shadow: 1px 18px 20px -22px #000;
+  height: 100%;
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+header nav .rightDiv {
+  padding-right: 0;
+}
+
+header nav .rightDiv .logoutBtn {
+  background: var(--footerTop-txt);
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  padding: 0 15px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: var(--footerTop-bg);
+  cursor: pointer;
+}
+/*# sourceMappingURL=header.css.map */
