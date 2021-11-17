@@ -13,11 +13,12 @@ const loginErrorCodes = {
 };
 
 export function* getLogin({ username, password }) {
+
   let response = yield call(AuthReq.getLogin, username, password);
 
   if (response) {
     if (response.result) {
-      response.wallet_balance = JSON.parse(response.wallet_balance);
+      response.balance = JSON.parse(response.balance);
 
       localStorage.setItem('user', JSON.stringify(response));
       yield put(AuthActions.setUserData(response));
@@ -28,34 +29,36 @@ export function* getLogin({ username, password }) {
   }
 }
 
+
 export function* logOut() {
   const user = yield select(state => state.auth.user);
-
   yield call(AuthReq.requestLogOut, user.token);
 
   window.localStorage.removeItem('user');
   yield put(AuthActions.resetAuth());
+
 }
 
 
+export function* getMovimenti({ from, to,filter }) {
 
+  const user = yield select(state => state.auth.user);
+  const response = yield call(AuthReq.getMovimenti, from, to,filter, user.token);
 
+  if (response) {
 
-
-
-
-
-
-
-
+    yield put(AuthActions.setMovimenti(response));
+  }
+}
 
 
 export function* getData({ param1, param2 }) {
+
   const response = yield call(AuthReq.getDataReq, param1, param2);
   const testData = yield select((state) => state.auth.test);
 
   if (response) {
-    console.log("response", response);
+
     yield put(AuthActions.setTest({ response, testData }));
   }
 }

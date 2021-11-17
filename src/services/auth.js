@@ -47,17 +47,32 @@ export const getDataReq = (param1, param2) => {
 };
 
 
+
 export const getLogin = (username, password) => {
   return fetchWrapper(`${endpoint}/`, {
     body: {
       userid: username,
       pwd: password,
       cmd: 'login',
-      // skinname: Bconfig.name,
+      skinname: 'bet-engine',
     },
   });
 };
 
+
 export const requestLogOut = token => {
   return fetchWrapper(`${endpoint}/logout?token=${token}`);
+};
+
+export const getMovimenti = (from, to,filter,token) => {
+  return fetchWrapper(`${endpoint}/`, {
+    body: {
+      from: from,
+      to: to,
+      filter: filter,
+      token:token,
+      cmd:"get_movements",
+      skinname: 'bet-engine',
+    },
+  });
 };

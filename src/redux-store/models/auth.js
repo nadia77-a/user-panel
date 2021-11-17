@@ -8,6 +8,8 @@ const { Types, Creators } = createActions({
   updateUser: ['payload'],
   logOut: [''],
   resetAuth: [],
+  getMovimenti:["from","to","filter"],
+  setMovimenti:['movimenti']
 });
 
 export const AuthTypes = Types;
@@ -16,6 +18,7 @@ export default Creators;
 const INITIAL_STATE = {
   test: "test",
   user: JSON.parse(localStorage.getItem('user')) || null,
+  movimenti:[]
 };
 export const reducer = createReducer(INITIAL_STATE, {
   SET_TEST: (state, { test }) => ({
@@ -43,4 +46,8 @@ export const reducer = createReducer(INITIAL_STATE, {
       user: { ...user },
     };
   },
+  SET_MOVIMENTI: (state, { movimenti }) => ({
+    ...state,
+    movimenti,
+  }),
 });

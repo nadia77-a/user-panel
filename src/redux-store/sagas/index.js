@@ -9,6 +9,8 @@ export default function* rootSaga() {
     ...[takeLatest("GET_DATA", AuthGenerators.getData)],
     takeLatest('GET_LOGIN', AuthGenerators.getLogin),
     takeLatest('LOG_OUT', AuthGenerators.logOut),
+    takeLatest('GET_MOVIMENTI', AuthGenerators.getMovimenti),
+
     // MAIN
   ]);
 }

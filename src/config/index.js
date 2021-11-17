@@ -1,5 +1,5 @@
 import { notification } from "antd";
-export const endpoint = "test.com";
+export const endpoint = "https://adm.bet-engine.com";
 
 const hasCode = (error, status) => {
   if (

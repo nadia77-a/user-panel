@@ -1,7 +1,9 @@
 
-import React from "react";
+import React, { useEffect } from "react";
+import AuthActions from "redux-store/models/auth";
+import { connect } from "react-redux";
 import "./movimenti.css";
-import { Form, DatePicker,Select, Table, Button} from 'antd/lib';
+import { Form, DatePicker,Select, Table, Button} from 'antd';
 
 
 const { Option } = Select;
@@ -34,15 +36,19 @@ const config = {
 };
 
 
-const Movimenti = () => {
+const Movimenti = ({ getMovimenti, movimenti }) => {
+  useEffect(() => {
+ 
+  }, [getMovimenti, movimenti]);
   const onFinish = (fieldsValue) => {
     // Should format date value before submit.
     const values = {
       ...fieldsValue,
-      'date-picker-from': fieldsValue['date-picker-from'].format('YYYY-MM-DD'),
-      'date-picker-to': fieldsValue['date-picker-to'].format('YYYY-MM-DD'),
+      'datePickerFrom': fieldsValue['date-picker-from'].format('YYYY-MM-DD'),
+      'datePickerTo': fieldsValue['date-picker-to'].format('YYYY-MM-DD'),
       
     };
+    getMovimenti(values.datePickerFrom,values.datePickerTo,values.select);
     console.log('Received values of form: ', values);
   };
 
@@ -82,7 +88,7 @@ const Movimenti = () => {
  
       >
        
-        <Button  className="submitBtn">
+       <Button type="primary" htmlType="submit">
           Filter
         </Button>
       </Form.Item>
@@ -239,4 +245,8 @@ const data = [
       },
   ];
 
-export default Movimenti;
+
+const mpStP = (state) => ({
+  movimenti: state.auth.movimenti,
+});
+export default connect(mpStP, AuthActions)(Movimenti);
