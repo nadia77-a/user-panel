@@ -1,0 +1,33 @@
+#filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+  margin-bottom: 16px;
+}
+
+#filters .ant-form-item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0px;
+  width: 190px;
+}
+
+#filters .ant-form-item .ant-form-item-label > label {
+  font-weight: 500;
+}
+
+#filters .submitBtn {
+  width: 100px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

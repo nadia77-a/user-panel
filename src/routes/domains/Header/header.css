@@ -30,6 +30,11 @@ header nav {
 
 header nav .rightDiv {
   padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 1px 0px var(--borderColor1-1);
+          box-shadow: 1px 0px var(--borderColor1-1);
 }
 
 header nav .rightDiv .logoutBtn {
@@ -52,5 +57,369 @@ header nav .rightDiv .logoutBtn {
   transition: 0.3s;
   color: var(--footerTop-bg);
   cursor: pointer;
+}
+
+header nav .rightDiv .logged-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header nav .rightDiv .logged-container .userDropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+header nav .rightDiv .logged-container .userDropDown > i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-left: 1px solid var(--borderColor1-2);
+  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
+          box-shadow: -1px 0px var(--borderColor1-1);
+  cursor: pointer;
+}
+
+header nav .rightDiv .logged-container .userDropDown > i:hover {
+  background: var(--accent-bg);
+  color: var(--accent-txt);
+}
+
+header nav .rightDiv .logged-container .userDropDown:hover .userDropDown-drop {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header nav .rightDiv .logged-container .userDropDown-drop {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: var(--bg2);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  min-width: 240px;
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .rightDiv .logged-container .userDropDown-drop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+}
+
+header nav .rightDiv .logged-container .userDropDown-drop li {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 15px;
+  border-bottom: 1px solid var(--accent-txt);
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .rightDiv .logged-container .userDropDown-drop li:hover {
+  background: var(--accent-bg);
+  color: var(--accent-txt);
+}
+
+header nav .rightDiv .logged-container .userDropDown-drop li:last-child {
+  border-bottom: 0;
+}
+
+header nav .rightDiv .logged-container .balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+
+header nav .rightDiv .logged-container .balance > i {
+  height: 100%;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  border-left: 1px solid var(--borderColor1-2);
+  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
+          box-shadow: -1px 0px var(--borderColor1-1);
+}
+
+header nav .rightDiv .logged-container .balance > i:hover {
+  background: var(--accent-bg);
+  color: var(--accent-txt);
+}
+
+header nav .rightDiv .logged-container .balance > div > span {
+  padding-right: 5px;
+}
+
+header nav .rightDiv .logged-container .balance > div > span:last-child {
+  margin-right: 20px;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-wrapper {
+  position: relative;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-wrapper:hover .wallet-dropdown {
+  display: block;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-dropdown {
+  display: none;
+  position: absolute;
+  background: var(--accent-col);
+  right: 0;
+  width: 100px;
+  text-align: right;
+  -webkit-box-shadow: 2px 2px 9px 0px black;
+          box-shadow: 2px 2px 9px 0px black;
+  top: 28px;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-dropdown > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-dropdown > div > span {
+  display: block;
+  width: 50%;
+  line-height: 20px;
+}
+
+header nav .rightDiv .logged-container .balance .wallet-dropdown > div > span:last-child {
+  width: 30px;
+  text-align: left;
+}
+
+header nav .rightDiv .logged-container > button {
+  background: var(--accent-bg);
+  color: var(--accent-txt);
+  border: 0;
+  height: 23px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+header nav .rightDiv .logged-container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .rightDiv .logged-container .icons i {
+  height: 100%;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-right: 1px solid var(--accent-col);
+  -webkit-box-shadow: 1px 0px var(--accent-txt);
+          box-shadow: 1px 0px var(--accent-txt);
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+header nav .rightDiv .logged-container .icons i:hover {
+  opacity: 1;
+}
+
+header nav .rightDiv .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 40px;
+  border-left: 1px solid var(--borderColor1-2);
+  border-right: 1px solid var(--borderColor1-2);
+  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
+          box-shadow: -1px 0px var(--borderColor1-1);
+  padding: 0 10px;
+}
+
+header nav .rightDiv .lang > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+header nav .rightDiv .lang > div > img {
+  width: 23px;
+  margin-right: 5px;
+}
+
+header nav .rightDiv .lang > div > i {
+  margin-left: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .rightDiv .lang .dropDown {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  z-index: 1;
+  width: 100px;
+  background: var(--bg2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  overflow: hidden;
+}
+
+header nav .rightDiv .lang .dropDown.dropDown:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #0000001c;
+  display: block;
+  content: '';
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+}
+
+header nav .rightDiv .lang .dropDown-item {
+  padding: 3px 10px;
+  border-bottom: 1px solid var(--borderColor1-1);
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header nav .rightDiv .lang .dropDown-item img {
+  width: 16px;
+  margin-right: 5px;
+  height: 18px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header nav .rightDiv .lang .dropDown-item:hover {
+  background: var(--accent-bg);
+  color: var(--accent-col);
 }
 /*# sourceMappingURL=header.css.map */

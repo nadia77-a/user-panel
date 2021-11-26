@@ -1,16 +1,20 @@
 html {
-  --accent-bg: #0078ff;
+  --accent-bg: #16607e;
+  --accent-bg-hover: #1585b3;
   --accent-txt: #fff;
-  --circle-bg: #12dfff;
+  --circle-bg: #2385ad;
 
   --header-bg: #fff;
   --header-txt: #3c4349;
 
-  --footerTop-bg: #0078ff;
+  --footerTop-bg: #16607e;
   --footerTop-txt: #fff;
 
   --second-bg: #f7faff;
   --second-txt: #3c4349;
 
-  --menu-presto: #12dfff;
+  --menu-presto: #2385ad;
+  --borderColor1-2: #2385ad;
+  --borderColor1-1: #10465c;
+  --bg2: #134d64;
 }

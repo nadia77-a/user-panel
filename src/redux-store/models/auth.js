@@ -1,15 +1,21 @@
 import { createActions, createReducer } from "reduxsauce";
+import  Bconfig  from "config";
+
+console.log("Bconfig",Bconfig);
 
 const { Types, Creators } = createActions({
   setTest: ["test"],
   getData: ["param1", "param2"],
+  setLanguage: ['language'],
   getLogin: ['username', 'password'],
   setUserData: ['user'],
   updateUser: ['payload'],
   logOut: [''],
   resetAuth: [],
   getMovimenti:["from","to","filter"],
-  setMovimenti:['movimenti']
+  setMovimenti:['movimenti'],
+  getReportSport:["from","to"],
+  setReportSport:['reportSport'],
 });
 
 export const AuthTypes = Types;
@@ -17,13 +23,20 @@ export default Creators;
 
 const INITIAL_STATE = {
   test: "test",
+  language:
+  localStorage.getItem('language') || Object.keys(Bconfig['languages'])[0],
   user: JSON.parse(localStorage.getItem('user')) || null,
-  movimenti:[]
+  movimenti:[],
+  reportSport:[]
 };
 export const reducer = createReducer(INITIAL_STATE, {
   SET_TEST: (state, { test }) => ({
     ...state,
     test,
+  }),
+  SET_LANGUAGE: (state, { language }) => ({
+    ...state,
+    language,
   }),
   RESET_AUTH: (state, action) => ({
     ...INITIAL_STATE,
@@ -49,5 +62,9 @@ export const reducer = createReducer(INITIAL_STATE, {
   SET_MOVIMENTI: (state, { movimenti }) => ({
     ...state,
     movimenti,
+  }),
+  SET_REPORT_SPORT: (state, { reportSport }) => ({
+    ...state,
+    reportSport,
   }),
 });

@@ -4,22 +4,20 @@ import 'antd/dist/antd.css';
 
 import './style.css';
 
-import { Login,Backoffice } from './routes';
+import { Login, Backoffice } from './routes';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
 const Root = () => {
- 
   return (
-      <HashRouter>
+    <HashRouter>
       <Switch>
-        <PublicRoute  component={Login} path="/" exact />
-        <PublicRoute  component={Login} path="/login" exact />
+        <PublicRoute component={Login} path="/" exact />
+        <PublicRoute component={Login} path="/login" exact />
         <PrivateRoute component={Backoffice} path="/backoffice" exact />
       </Switch>
     </HashRouter>
   );
 };
 
-
-export default Root
+export default Root;

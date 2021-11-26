@@ -2,9 +2,10 @@
 import React, { useEffect } from "react";
 import AuthActions from "redux-store/models/auth";
 import { connect } from "react-redux";
+import "../style.css";
 import "./movimenti.css";
 import { Form, DatePicker,Select, Table, Button} from 'antd';
-
+import { Trans, t } from '@lingui/macro';
 
 const { Option } = Select;
 const formItemLayout = {
@@ -44,17 +45,16 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
     // Should format date value before submit.
     const values = {
       ...fieldsValue,
-      'datePickerFrom': fieldsValue['date-picker-from'].format('YYYY-MM-DD'),
-      'datePickerTo': fieldsValue['date-picker-to'].format('YYYY-MM-DD'),
+      'datePickerFrom': fieldsValue['date-picker-from'].format('YYYY/MM/DD'),
+      'datePickerTo': fieldsValue['date-picker-to'].format('YYYY/MM/DD'),
       
     };
-    getMovimenti(values.datePickerFrom,values.datePickerTo,values.select);
-    console.log('Received values of form: ', values);
+    getMovimenti(values.datePickerFrom,values.datePickerTo,parseInt(values.select));
   };
-
+  console.log("movimenti",movimenti);
   return (
       <>
-    <Form name="movimentiFilters" {...formItemLayout} onFinish={onFinish}>
+    <Form name="filters" {...formItemLayout} onFinish={onFinish} className="movimentiFilters">
       <Form.Item name="date-picker-from" label="Dal" {...config}>
         <DatePicker />
       </Form.Item>
@@ -68,10 +68,10 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
         rules={[{ required: true, message: 'Per favore scegli!' }]}
       >
         <Select placeholder="Seleziona">
-          <Option value="contabili">Contaboli</Option>
-          <Option value="fidi">Fido</Option>
-          <Option value="provvigioni">Provvigioni</Option>
-          <Option value="tutti">Tutti</Option>
+          <Option value="1">Contabili</Option>
+          <Option value="3">Fido</Option>
+          <Option value="4">Provvigioni</Option>
+          <Option value="9">Tutti</Option>
         </Select>
       </Form.Item>
       <Form.Item
@@ -94,7 +94,7 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
       </Form.Item>
     </Form>
 
-<Table columns={columns} dataSource={data} />
+<Table columns={columns} dataSource={movimenti} rowKey="id"/>
 </>
   );
 };
@@ -102,147 +102,39 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
 
 const columns = [
     {
-      title: 'Oggeto',
-      dataIndex: 'oggeto',
-      key: 'oggeto',
+      title: <Trans>Oggeto</Trans>,
+      dataIndex: 'object',
+      key: 'object',
     },
     {
-      title: 'Tipo',
-      dataIndex: 'tipo',
-      key: 'tipo',
+      title: <Trans>Tipo</Trans>,
+      dataIndex: 'causal_name',
+      key: 'causal_name',
     },
     {
-      title: 'Dati',
-      dataIndex: 'dati',
-      key: 'dati',
+      title: <Trans>Dati</Trans>,
+      dataIndex: 'action',
+      key: 'action',
     },
     {
-      title: 'Avuti',
-      key: 'avuti',
-      dataIndex: 'avuti',
+      title: <Trans>Avuti</Trans>,
+      key: 'amount',
+      dataIndex: 'amount',
+      render: (text,row) => <>{row["amount"]} {row["currency"]}</>,
     },
     {
-        title: 'DISPONILITA` PREC',
-        dataIndex: 'disponibilita',
-        key: 'disponibilita',
+        title: <Trans>DISPONILITA` PREC</Trans>,
+        dataIndex:  ['balance'],
+        key: ['balance'],
+        render: (text,row) => <>{row["balance"]} {row["currency"]}</>,
       },
       {
-        title: 'Data',
-        dataIndex: 'data',
-        key: 'data',
+        title: <Trans>Data</Trans>,
+        dataIndex: 'date',
+        key: 'date',
       },
    
    
-  ];
-const data = [
-    {
-      key: '1',
-      oggeto: 'John Brown',
-      tipo: 32,
-      dati: 'New York No. 1 Lake Park',
-      avuti: ['nice', 'developer'],
-      disponibilita:"test",
-      data:"data test"
-    },
-    {
-      key: '2',
-      oggeto: 'Jim Green',
-      tipo: 42,
-      dati: 'London No. 1 Lake Park',
-      avuti: ['loser'],
-      disponibilita:"test",
-      data:"data test"
-    },
-    {
-      key: '3',
-      oggeto: 'Joe Black',
-      tipo: 32,
-      dati: 'Sidney No. 1 Lake Park',
-      avuti: ['cool', 'teacher'],
-      disponibilita:"test",
-      data:"data test"
-    },
-    {
-        key: '4',
-        oggeto: 'John Brown',
-        tipo: 32,
-        dati: 'New York No. 1 Lake Park',
-        avuti: ['nice', 'developer'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '5',
-        oggeto: 'Jim Green',
-        tipo: 42,
-        dati: 'London No. 1 Lake Park',
-        avuti: ['loser'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '6',
-        oggeto: 'Joe Black',
-        tipo: 32,
-        dati: 'Sidney No. 1 Lake Park',
-        avuti: ['cool', 'teacher'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '7',
-        oggeto: 'John Brown',
-        tipo: 32,
-        dati: 'New York No. 1 Lake Park',
-        avuti: ['nice', 'developer'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '8',
-        oggeto: 'Jim Green',
-        tipo: 42,
-        dati: 'London No. 1 Lake Park',
-        avuti: ['loser'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '9',
-        oggeto: 'Joe Black',
-        tipo: 32,
-        dati: 'Sidney No. 1 Lake Park',
-        avuti: ['cool', 'teacher'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '10',
-        oggeto: 'John Brown',
-        tipo: 32,
-        dati: 'New York No. 1 Lake Park',
-        avuti: ['nice', 'developer'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '11',
-        oggeto: 'Jim Green',
-        tipo: 42,
-        dati: 'London No. 1 Lake Park',
-        avuti: ['loser'],
-        disponibilita:"test",
-        data:"data test"
-      },
-      {
-        key: '12',
-        oggeto: 'Joe Black',
-        tipo: 32,
-        dati: 'Sidney No. 1 Lake Park',
-        avuti: ['cool', 'teacher'],
-        disponibilita:"test",
-        data:"data test"
-      },
   ];
 
 

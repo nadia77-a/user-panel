@@ -1,0 +1,31 @@
+{
+    "name": "Bet Engine",
+    "short_name": "BE",
+    "endPoint": "https://adm.bet-engine.com",
+    "endPointLive": "https://adm.bet-engine.com",
+    "socketUrl": "wss://wss.bet-engine.com/ws",
+    "cy": {
+      "symbol": "€",
+      "name": "Euro",
+      "symbol_native": "€",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "EUR",
+      "name_plural": "euros"
+    },
+    "font-family": "roboto",
+    "description": "Backoffice system",
+    "keywords": "Backoffice",
+    "background_color": "#00000000",
+    "languages": {
+      "en": {
+        "active": true,
+        "name": "English"
+      },
+      "it": {
+        "active": true,
+        "name": "Italiano"
+      }
+    }
+  }
+  

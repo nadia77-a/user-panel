@@ -1,5 +1,4 @@
 import { notification } from "antd";
-export const endpoint = "https://adm.bet-engine.com";
 
 const hasCode = (error, status) => {
   if (
@@ -40,3 +39,7 @@ export const handleError = (error) => {
   }
   return Promise.reject(error);
 };
+
+let Bconfig = require('./BetEngine.json');
+export default Bconfig;
+export const endpoint = Bconfig.endPoint;

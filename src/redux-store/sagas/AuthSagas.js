@@ -51,6 +51,16 @@ export function* getMovimenti({ from, to,filter }) {
   }
 }
 
+export function* getReportSport({ from, to}) {
+
+  const user = yield select(state => state.auth.user);
+  const response = yield call(AuthReq.getReportSport, from, to, user.token);
+
+  if (response) {
+
+    yield put(AuthActions.setReportSport(response));
+  }
+}
 
 export function* getData({ param1, param2 }) {
 
@@ -62,8 +72,3 @@ export function* getData({ param1, param2 }) {
     yield put(AuthActions.setTest({ response, testData }));
   }
 }
-
-
-
-
-

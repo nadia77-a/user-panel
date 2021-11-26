@@ -19,6 +19,8 @@ header {
     margin-right: auto !important;
     .rightDiv {
       padding-right: 0;
+      display: flex;
+      box-shadow: 1px 0px var(--borderColor1-1);
       .logoutBtn {
         background: var(--footerTop-txt);
         font-size: 13px;
@@ -32,6 +34,247 @@ header {
         transition: 0.3s;
         color: var(--footerTop-bg);
         cursor: pointer;
+      }
+      .logged-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        .userDropDown {
+          display: flex;
+          position: relative;
+          > i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            border-left: 1px solid var(--borderColor1-2);
+            box-shadow: -1px 0px var(--borderColor1-1);
+            cursor: pointer;
+            &:hover {
+              background: var(--accent-bg);
+              color: var(--accent-txt);
+            }
+          }
+          &:hover {
+            .userDropDown-drop {
+              display: flex !important;
+            }
+          }
+          &-drop {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            transform: translateY(100%);
+            background: var(--bg2);
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            min-width: 240px;
+            display: none;
+            transition: 0.3s;
+            ul {
+              display: flex;
+              flex-flow: column;
+              width: 100%;
+            }
+            li {
+              height: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 0 15px;
+              border-bottom: 1px solid var(--accent-txt);
+              cursor: pointer;
+              transition: 0.3s;
+              &:hover {
+                background: var(--accent-bg);
+                color: var(--accent-txt);
+              }
+              &:last-child {
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+        .balance {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          > i {
+            height: 100%;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            border-left: 1px solid var(--borderColor1-2);
+            box-shadow: -1px 0px var(--borderColor1-1);
+            &:hover {
+              background: var(--accent-bg);
+              color: var(--accent-txt);
+            }
+          }
+          > div > span {
+            padding-right: 5px;
+            &:last-child {
+              margin-right: 20px;
+            }
+          }
+      
+          .wallet {
+            &-wrapper {
+              position: relative;
+      
+              &:hover {
+                .wallet-dropdown {
+                  display: block;
+                }
+              }
+            }
+      
+            &-dropdown {
+              display: none;
+              position: absolute;
+              background: var(--accent-col);
+              right: 0;
+              width: 100px;
+              text-align: right;
+              box-shadow: 2px 2px 9px 0px black;
+              top: 28px;
+      
+              > div {
+                display: flex;
+                justify-content: space-evenly;
+                > span {
+                  display: block;
+                  width: 50%;
+                  line-height: 20px;
+      
+                  &:last-child {
+                    width: 30px;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .logged-container {
+        > button {
+          background: var(--accent-bg);
+          color: var(--accent-txt);
+          border: 0;
+          height: 23px;
+          font-size: 13px;
+          text-transform: uppercase;
+          border-radius: 3px;
+          cursor: pointer;
+          margin: 0 10px;
+        }
+        .icons {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          justify-content: space-between;
+          i {
+            height: 100%;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            border-right: 1px solid var(--accent-col);
+            box-shadow: 1px 0px var(--accent-txt);
+            font-size: 20px;
+            opacity: 0.6;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .lang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 40px;
+        border-left: 1px solid var(--borderColor1-2);
+        border-right: 1px solid var(--borderColor1-2);
+        box-shadow: -1px 0px var(--borderColor1-1);
+        padding: 0 10px;
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          > img {
+            width: 23px;
+            margin-right: 5px;
+          }
+          > i {
+            margin-left: 10px;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .dropDown {
+          position: absolute;
+          right: 0;
+          bottom: 0px;
+          transform: translateY(100%);
+          z-index: 1;
+          width: 100px;
+          background: var(--bg2);
+          display: flex;
+          text-transform: uppercase;
+          flex-flow: column;
+          overflow: hidden;
+          &.dropDown:after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #0000001c;
+            display: block;
+            content: '';
+            transform: translate(10px, 10px);
+          }
+          &-item {
+            padding: 3px 10px;
+            border-bottom: 1px solid var(--borderColor1-1);
+            width: 100%;
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 12px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img {
+              width: 16px;
+              margin-right: 5px;
+              height: 18px;
+              object-fit: contain;
+            }
+            &:hover {
+              background: var(--accent-bg);
+              color: var(--accent-col);
+            }
+          }
+        }
       }
     }
   }

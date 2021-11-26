@@ -1,3 +1,19 @@
+@import url('./assets/font-awsome.min.css');
+
 .menuTabs {
   padding: 0 15px;
+}
+.ant-btn-primary {
+  color: var(--accent-txt);
+  background: var(--accent-bg);
+  border-color: var(--accent-bg);
+  &:hover,
+  &:focus {
+    color: var(--accent-txt);
+    background: var(--accent-bg-hover);
+    border-color: var(--accent-bg-hover);
+  }
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color:  var(--accent-bg-hover);
 }

@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-11-26 15:26+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/routes/domains/Movimenti/index.jsx:120
+msgid "Avuti"
+msgstr ""
+
+#: src/redux-store/sagas/AuthSagas.js:12
+msgid "Could not get you logged in! Please try again."
+msgstr "Could not get you logged in! Please try again"
+
+#: src/routes/domains/Movimenti/index.jsx:126
+msgid "DISPONILITA` PREC"
+msgstr ""
+
+#: src/routes/domains/Movimenti/index.jsx:132
+msgid "Data"
+msgstr ""
+
+#: src/routes/domains/Movimenti/index.jsx:115
+msgid "Dati"
+msgstr ""
+
+#: src/routes/views/Backoffice.jsx:23
+msgid "Lista Utenti"
+msgstr "User List"
+
+#: src/PrivateRoute.jsx:33
+#~ msgid "Message Inbox"
+#~ msgstr "Message Inbox"
+
+#: src/routes/views/Backoffice.jsx:17
+msgid "Movimenti"
+msgstr "Movements"
+
+#: src/routes/domains/Movimenti/index.jsx:105
+msgid "Oggeto"
+msgstr ""
+
+#: src/redux-store/sagas/AuthSagas.js:11
+msgid "Password is not correct!!"
+msgstr "Password is not correct"
+
+#: src/routes/views/Backoffice.jsx:26
+msgid "Report"
+msgstr "Report"
+
+#: src/routes/views/Backoffice.jsx:29
+msgid "Report Sport"
+msgstr "Sports Report"
+
+#: src/routes/views/Backoffice.jsx:20
+msgid "Scommesse"
+msgstr "Betting"
+
+#: src/redux-store/sagas/AuthSagas.js:25
+msgid "Successfully logged in!!"
+msgstr "Successfully logged in"
+
+#: src/routes/domains/Movimenti/index.jsx:110
+msgid "Tipo"
+msgstr ""
+
+#: src/redux-store/sagas/AuthSagas.js:10
+msgid "Username does not exist!!"
+msgstr "Username does not exist"
