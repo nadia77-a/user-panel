@@ -18,13 +18,13 @@
     "keywords": "Backoffice",
     "background_color": "#00000000",
     "languages": {
-      "en": {
-        "active": true,
-        "name": "English"
-      },
       "it": {
         "active": true,
         "name": "Italiano"
+      },
+      "en": {
+        "active": true,
+        "name": "English"
       }
     }
   }

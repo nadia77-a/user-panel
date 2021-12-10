@@ -1,5 +1,4 @@
 import React from "react";
-
 import { connect } from "react-redux";
 import { AuthActions } from "redux-store/models";
 import { withRouter } from "react-router-dom";
@@ -26,11 +25,7 @@ class Login extends React.Component {
     if (isForgot) {
       this.props.forgotPassword(email);
     } else {
-        console.log("userName, password",userName, password)
        await this.props.getLogin(userName, password);
-    // await this.props.getLogin(userName, password);
-      //console.log("this.props.match.params", this.props.match.params);
-    //   window.location.hash = ``;
     }
   };
 

@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 
 import { I18nProvider } from '@lingui/react';
 import { i18n } from '@lingui/core';
-import { Trans, t } from '@lingui/macro';
 import { messages as enMessages } from 'locales/en/messages.js';
 import { messages as itMessages } from 'locales/it/messages.js';
 

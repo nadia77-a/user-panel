@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import "../style.css";
 import "./movimenti.css";
 import { Form, DatePicker,Select, Table, Button} from 'antd';
-import { Trans, t } from '@lingui/macro';
+import { Trans,t } from '@lingui/macro';
 
 const { Option } = Select;
 const formItemLayout = {
@@ -31,7 +31,7 @@ const config = {
     {
       type: 'object',
       required: true,
-      message: 'Per favore scegli!',
+      message: <Trans>Per favore scegli!</Trans>,
     },
   ],
 };
@@ -51,27 +51,27 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
     };
     getMovimenti(values.datePickerFrom,values.datePickerTo,parseInt(values.select));
   };
-  console.log("movimenti",movimenti);
+
   return (
       <>
     <Form name="filters" {...formItemLayout} onFinish={onFinish} className="movimentiFilters">
-      <Form.Item name="date-picker-from" label="Dal" {...config}>
+      <Form.Item name="date-picker-from" label={t`Dal`} {...config}>
         <DatePicker />
       </Form.Item>
-      <Form.Item name="date-picker-to" label="Al" {...config}>
+      <Form.Item name="date-picker-to" label={<Trans>Al</Trans>} {...config}>
         <DatePicker />
       </Form.Item>
       <Form.Item
         name="select"
-        label="Filtro"
+        label={<Trans>Filtro</Trans>}
         hasFeedback
-        rules={[{ required: true, message: 'Per favore scegli!' }]}
+        rules={[{ required: true, message: <Trans>Per favore scegli!</Trans> }]}
       >
-        <Select placeholder="Seleziona">
-          <Option value="1">Contabili</Option>
-          <Option value="3">Fido</Option>
-          <Option value="4">Provvigioni</Option>
-          <Option value="9">Tutti</Option>
+        <Select placeholder={<Trans>Seleziona</Trans>}>
+          <Option value="1"><Trans>Contabili</Trans></Option>
+          <Option value="3"><Trans>Fido</Trans></Option>
+          <Option value="4"><Trans>Provvigioni</Trans></Option>
+          <Option value="9"><Trans>Tutti</Trans></Option>
         </Select>
       </Form.Item>
       <Form.Item
@@ -89,7 +89,7 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
       >
        
        <Button type="primary" htmlType="submit">
-          Filter
+         Filtro
         </Button>
       </Form.Item>
     </Form>

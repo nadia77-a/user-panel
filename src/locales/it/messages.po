@@ -13,33 +13,88 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/routes/domains/ReportSport/index.jsx:91
+msgid "Account"
+msgstr "Conto"
+
+#: src/routes/domains/Movimenti/index.jsx:61
+#: src/routes/domains/ReportSport/index.jsx:58
+msgid "Al"
+msgstr "Al"
+
 #: src/routes/domains/Movimenti/index.jsx:120
 msgid "Avuti"
-msgstr ""
+msgstr "Avuti"
+
+#: src/routes/domains/ReportSport/index.jsx:152
+msgid "Bonus Murato"
+msgstr "Bonus Murato"
+
+#: src/routes/domains/ReportSport/index.jsx:137
+msgid "Contabile"
+msgstr "Contabile"
+
+#: src/routes/domains/Movimenti/index.jsx:71
+msgid "Contabili"
+msgstr "Contabili"
 
 #: src/redux-store/sagas/AuthSagas.js:12
 msgid "Could not get you logged in! Please try again."
 msgstr "Impossibile accedere! Per favore riprova"
 
+#: src/routes/domains/ReportSport/index.jsx:106
+msgid "Coupon"
+msgstr "Coupon"
+
+#: src/routes/domains/ReportSport/index.jsx:101
+msgid "Coupon Chiusi"
+msgstr "Coupon Chiusi"
+
 #: src/routes/domains/Movimenti/index.jsx:126
 msgid "DISPONILITA` PREC"
-msgstr ""
+msgstr "DISPONILITA` PREC"
+
+#: src/routes/domains/Movimenti/index.jsx:58
+#: src/routes/domains/ReportSport/index.jsx:55
+msgid "Dal"
+msgstr "Dal"
 
 #: src/routes/domains/Movimenti/index.jsx:132
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 #: src/routes/domains/Movimenti/index.jsx:115
 msgid "Dati"
-msgstr ""
+msgstr "Dati"
+
+#: src/routes/domains/Movimenti/index.jsx:72
+msgid "Fido"
+msgstr "Fido"
+
+#: src/routes/domains/ReportSport/index.jsx:76
+#~ msgid "Filter"
+#~ msgstr "Filtro"
+
+#: src/routes/domains/Movimenti/index.jsx:66
+#: src/routes/domains/ReportSport/index.jsx:74
+msgid "Filtro"
+msgstr "Filtro"
+
+#: src/routes/domains/ReportSport/index.jsx:116
+msgid "Giocate Chiuse"
+msgstr "Giocate Chiuse"
 
 #: src/redux-store/sagas/AuthSagas.js:11
 #~ msgid "Il password non è corretta!!"
 #~ msgstr "Il password non è corretta"
 
+#: src/routes/domains/ReportSport/index.jsx:111
+msgid "In Gioco"
+msgstr "In Gioco"
+
 #: src/routes/views/Backoffice.jsx:23
 msgid "Lista Utenti"
-msgstr ""
+msgstr "Lista Utenti"
 
 #: src/PrivateRoute.jsx:33
 #~ msgid "Message Inbox"
@@ -47,36 +102,82 @@ msgstr ""
 
 #: src/routes/views/Backoffice.jsx:17
 msgid "Movimenti"
-msgstr ""
+msgstr "Movimenti"
+
+#: src/routes/domains/ReportSport/index.jsx:147
+msgid "Murato sett"
+msgstr "Murato sett"
 
 #: src/routes/domains/Movimenti/index.jsx:105
 msgid "Oggeto"
-msgstr ""
+msgstr "Oggeto"
 
 #: src/redux-store/sagas/AuthSagas.js:11
 msgid "Password is not correct!!"
 msgstr "Il password non è corretta"
 
+#: src/routes/domains/Movimenti/index.jsx:34
+#: src/routes/domains/ReportSport/index.jsx:31
+msgid "Per favore scegli!"
+msgstr "Per favore scegli!"
+
+#: src/routes/domains/ReportSport/index.jsx:142
+msgid "Provv Chiuse"
+msgstr "Provv Chiuse"
+
+#: src/routes/domains/Movimenti/index.jsx:73
+msgid "Provvigioni"
+msgstr "Provvigioni"
+
 #: src/routes/views/Backoffice.jsx:26
 msgid "Report"
-msgstr ""
+msgstr "Report"
 
 #: src/routes/views/Backoffice.jsx:29
 msgid "Report Sport"
-msgstr ""
+msgstr "Report Sport"
 
 #: src/routes/views/Backoffice.jsx:20
 msgid "Scommesse"
-msgstr ""
+msgstr "Scommesse"
+
+#: src/routes/domains/Movimenti/index.jsx:70
+msgid "Seleziona"
+msgstr "Seleziona"
 
 #: src/redux-store/sagas/AuthSagas.js:25
 msgid "Successfully logged in!!"
 msgstr "Accesso effettuato con successo"
 
 #: src/routes/domains/Movimenti/index.jsx:110
+#: src/routes/domains/ReportSport/index.jsx:96
 msgid "Tipo"
-msgstr ""
+msgstr "Tipo"
+
+#: src/routes/domains/Movimenti/index.jsx:74
+msgid "Tutti"
+msgstr "Tutti"
+
+#: src/routes/domains/ReportSport/index.jsx:86
+msgid "User"
+msgstr "User"
 
 #: src/redux-store/sagas/AuthSagas.js:10
 msgid "Username does not exist!!"
 msgstr "Lo username non esiste"
+
+#: src/routes/domains/Header/index.jsx:32
+msgid "Utente"
+msgstr "Utente"
+
+#: src/routes/domains/ReportSport/index.jsx:126
+msgid "Utile"
+msgstr "Utile"
+
+#: src/routes/domains/ReportSport/index.jsx:157
+msgid "Utile Neto"
+msgstr "Utile Neto"
+
+#: src/routes/domains/ReportSport/index.jsx:121
+msgid "Vinto"
+msgstr "Vinto"

@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 import Header from 'routes/domains/Header';
 import Movimenti from 'routes/domains/Movimenti';
 import ReportSport from 'routes/domains/ReportSport';
-import { Trans, t } from '@lingui/macro';
+import { Trans} from '@lingui/macro';
 const { TabPane } = Tabs;
 
 function callback(key) {

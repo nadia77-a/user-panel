@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { AuthActions } from 'redux-store/models';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './header.css';
-import { Trans, t } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import Bconfig from "config";
 // import skinImages from 'skinImages';
  import images from 'images';
@@ -29,7 +29,7 @@ const Header = ({
                 <div className="userDropDown-drop">
                   <ul>
                     <li>
-                      <Trans>User</Trans>: {user.name}
+                      <Trans>Utente</Trans>: {user.name}
       
                     </li>
                     <li
@@ -37,8 +37,7 @@ const Header = ({
                         logOut();
                       }}
                     >
-                      Esci
-                      {/* <Trans>Esci</Trans> */}
+                      <Trans>Esci</Trans>
                     </li>
                   </ul>
                 </div>

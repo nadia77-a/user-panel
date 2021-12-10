@@ -13,25 +13,80 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/routes/domains/ReportSport/index.jsx:91
+msgid "Account"
+msgstr "Account"
+
+#: src/routes/domains/Movimenti/index.jsx:61
+#: src/routes/domains/ReportSport/index.jsx:58
+msgid "Al"
+msgstr "To"
+
 #: src/routes/domains/Movimenti/index.jsx:120
 msgid "Avuti"
-msgstr ""
+msgstr "Own"
+
+#: src/routes/domains/ReportSport/index.jsx:152
+msgid "Bonus Murato"
+msgstr "Bonus Murato"
+
+#: src/routes/domains/ReportSport/index.jsx:137
+msgid "Contabile"
+msgstr "Accountant"
+
+#: src/routes/domains/Movimenti/index.jsx:71
+msgid "Contabili"
+msgstr "Accountants"
 
 #: src/redux-store/sagas/AuthSagas.js:12
 msgid "Could not get you logged in! Please try again."
 msgstr "Could not get you logged in! Please try again"
 
+#: src/routes/domains/ReportSport/index.jsx:106
+msgid "Coupon"
+msgstr "Coupon"
+
+#: src/routes/domains/ReportSport/index.jsx:101
+msgid "Coupon Chiusi"
+msgstr "Closed coupons"
+
 #: src/routes/domains/Movimenti/index.jsx:126
 msgid "DISPONILITA` PREC"
-msgstr ""
+msgstr "AVAILABILITY PREC"
+
+#: src/routes/domains/Movimenti/index.jsx:58
+#: src/routes/domains/ReportSport/index.jsx:55
+msgid "Dal"
+msgstr "From"
 
 #: src/routes/domains/Movimenti/index.jsx:132
 msgid "Data"
-msgstr ""
+msgstr "Date"
 
 #: src/routes/domains/Movimenti/index.jsx:115
 msgid "Dati"
-msgstr ""
+msgstr "Data"
+
+#: src/routes/domains/Movimenti/index.jsx:72
+msgid "Fido"
+msgstr "Fido"
+
+#: src/routes/domains/ReportSport/index.jsx:76
+#~ msgid "Filter"
+#~ msgstr "Filter"
+
+#: src/routes/domains/Movimenti/index.jsx:66
+#: src/routes/domains/ReportSport/index.jsx:74
+msgid "Filtro"
+msgstr "Filter"
+
+#: src/routes/domains/ReportSport/index.jsx:116
+msgid "Giocate Chiuse"
+msgstr "Closed games"
+
+#: src/routes/domains/ReportSport/index.jsx:111
+msgid "In Gioco"
+msgstr "In play"
 
 #: src/routes/views/Backoffice.jsx:23
 msgid "Lista Utenti"
@@ -45,13 +100,30 @@ msgstr "User List"
 msgid "Movimenti"
 msgstr "Movements"
 
+#: src/routes/domains/ReportSport/index.jsx:147
+msgid "Murato sett"
+msgstr "Walled sett"
+
 #: src/routes/domains/Movimenti/index.jsx:105
 msgid "Oggeto"
-msgstr ""
+msgstr "Object"
 
 #: src/redux-store/sagas/AuthSagas.js:11
 msgid "Password is not correct!!"
 msgstr "Password is not correct"
+
+#: src/routes/domains/Movimenti/index.jsx:34
+#: src/routes/domains/ReportSport/index.jsx:31
+msgid "Per favore scegli!"
+msgstr "Please select"
+
+#: src/routes/domains/ReportSport/index.jsx:142
+msgid "Provv Chiuse"
+msgstr "Comm closed"
+
+#: src/routes/domains/Movimenti/index.jsx:73
+msgid "Provvigioni"
+msgstr "Commissions"
 
 #: src/routes/views/Backoffice.jsx:26
 msgid "Report"
@@ -65,14 +137,43 @@ msgstr "Sports Report"
 msgid "Scommesse"
 msgstr "Betting"
 
+#: src/routes/domains/Movimenti/index.jsx:70
+msgid "Seleziona"
+msgstr "Select"
+
 #: src/redux-store/sagas/AuthSagas.js:25
 msgid "Successfully logged in!!"
 msgstr "Successfully logged in"
 
 #: src/routes/domains/Movimenti/index.jsx:110
+#: src/routes/domains/ReportSport/index.jsx:96
 msgid "Tipo"
-msgstr ""
+msgstr "Type"
+
+#: src/routes/domains/Movimenti/index.jsx:74
+msgid "Tutti"
+msgstr "All"
+
+#: src/routes/domains/ReportSport/index.jsx:86
+msgid "User"
+msgstr "User"
 
 #: src/redux-store/sagas/AuthSagas.js:10
 msgid "Username does not exist!!"
 msgstr "Username does not exist"
+
+#: src/routes/domains/Header/index.jsx:32
+msgid "Utente"
+msgstr "User"
+
+#: src/routes/domains/ReportSport/index.jsx:126
+msgid "Utile"
+msgstr "Utils"
+
+#: src/routes/domains/ReportSport/index.jsx:157
+msgid "Utile Neto"
+msgstr "Net Profit"
+
+#: src/routes/domains/ReportSport/index.jsx:121
+msgid "Vinto"
+msgstr "Won"

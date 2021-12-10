@@ -78,10 +78,10 @@ export const getReportSport = (from, to, token) => {
   return fetchWrapper(`${endpoint}/`, {
     body: {
       from: from,
-      // to: to,
+       to: to,
       token: token,
       cmd: 'list_ticket',
-      // skinname: 'bet-engine',
+       skinname: 'bet-engine',
     },
   });
 };

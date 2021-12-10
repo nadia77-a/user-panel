@@ -3,6 +3,7 @@ import AuthActions from 'redux-store/models/auth';
 import { connect } from 'react-redux';
 import '../style.css';
 import { Form, DatePicker, Table, Button } from 'antd';
+import { Trans } from '@lingui/macro';
 
 const formItemLayout = {
   labelCol: {
@@ -27,7 +28,7 @@ const config = {
     {
       type: 'object',
       required: true,
-      message: 'Per favore scegli!',
+      message: <Trans>Per favore scegli!</Trans>
     },
   ],
 };
@@ -35,14 +36,12 @@ const config = {
 const ReportSport = ({ getReportSport, reportSport }) => {
   useEffect(() => {}, [getReportSport, reportSport]);
   const onFinish = fieldsValue => {
-    // Should format date value before submit.
     const values = {
       ...fieldsValue,
       datePickerFrom: fieldsValue['date-picker-from'].format('YYYY/MM/DD'),
       datePickerTo: fieldsValue['date-picker-to'].format('YYYY/MM/DD'),
     };
     getReportSport(values.datePickerFrom, values.datePickerTo);
-    console.log('Received values of form: ', values);
   };
 console.log("reportSport",reportSport);
   return (
@@ -53,10 +52,10 @@ console.log("reportSport",reportSport);
         onFinish={onFinish}
         className="reportSFilters"
       >
-        <Form.Item name="date-picker-from" label="Dal" {...config}>
+        <Form.Item name="date-picker-from" label={<Trans>Dal</Trans>} {...config}>
           <DatePicker />
         </Form.Item>
-        <Form.Item name="date-picker-to" label="Al" {...config}>
+        <Form.Item name="date-picker-to" label={<Trans>Al</Trans>} {...config}>
           <DatePicker />
         </Form.Item>
         <Form.Item
@@ -72,7 +71,7 @@ console.log("reportSport",reportSport);
           }}
         >
           <Button type="primary" htmlType="submit">
-            Filter
+            <Trans>Filtro</Trans>
           </Button>
         </Form.Item>
       </Form>
@@ -84,47 +83,47 @@ console.log("reportSport",reportSport);
 
 const columns = [
   {
-    title: 'User',
+    title: <Trans>User</Trans>,
     dataIndex: 'user',
     key: 'user',
   },
   {
-    title: 'Account',
+    title: <Trans>Account</Trans>,
     dataIndex: 'account',
     key: 'account',
   },
   {
-    title: 'Tipo',
+    title: <Trans>Tipo</Trans>,
     dataIndex: 'tipo',
     key: 'tipo',
   },
   {
-    title: 'Coupon Chiusi',
+    title: <Trans>Coupon Chiusi</Trans>,
     key: 'couponChiusi',
     dataIndex: 'couponChiusi',
   },
   {
-    title: 'Coupon',
+    title: <Trans>Coupon</Trans>,
     dataIndex: 'coupon',
     key: 'coupon',
   },
   {
-    title: 'In Gioco',
+    title: <Trans>In Gioco</Trans>,
     dataIndex: 'inGioco',
     key: 'inGioco',
   },
   {
-    title: 'Giocate Chiuse',
+    title: <Trans>Giocate Chiuse</Trans>,
     dataIndex: 'giocateChiuse',
     key: 'giocateChiuse',
   },
   {
-    title: 'Vinto',
+    title: <Trans>Vinto</Trans>,
     dataIndex: 'vinto',
     key: 'vinto',
   },
   {
-    title: 'Utile',
+    title: <Trans>Utile</Trans>,
     dataIndex: 'utile',
     key: 'utile',
   },
@@ -135,27 +134,27 @@ const columns = [
   },
 
   {
-    title: 'Contabile',
+    title: <Trans>Contabile</Trans>,
     dataIndex: 'contabile',
     key: 'contabile',
   },
   {
-    title: 'Provv Chiuse',
+    title: <Trans>Provv Chiuse</Trans>,
     dataIndex: 'provvChiuse',
     key: 'provvChiuse',
   },
   {
-    title: 'Murato sett',
+    title: <Trans>Murato sett</Trans>,
     dataIndex: 'muratoSett',
     key: 'muratoSett',
   },
   {
-    title: 'Bonus Murato',
+    title: <Trans>Bonus Murato</Trans>,
     dataIndex: 'bonusMurato',
     key: 'bonusMurato',
   },
   {
-    title: 'Utile Neto',
+    title: <Trans>Utile Neto</Trans>,
     dataIndex: 'utileNeto',
     key: 'utileNeto',
   },
