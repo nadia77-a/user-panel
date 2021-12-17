@@ -10,6 +10,7 @@ const loginErrorCodes = {
   'user-not-found': t`Username does not exist!!`,
   'wrong-password': t`Password is not correct!!`,
   default: t`Could not get you logged in! Please try again.`,
+  'no user found':"no user found"
 };
 
 export function* getLogin({ username, password }) {
@@ -68,8 +69,12 @@ export function* getUserList() {
   const response = yield call(AuthReq.getUserList, user.token);
 
   if (response) {
-
-    yield put(AuthActions.setUserList(response));
+    if (response.result) {
+    
+      notifyError(loginErrorCodes[response.msg] || loginErrorCodes['default']);
+    } else {
+      yield put(AuthActions.setUserList(response));
+    }
   }
 }
 
