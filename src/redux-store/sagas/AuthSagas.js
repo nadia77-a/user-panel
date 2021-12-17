@@ -62,6 +62,17 @@ export function* getReportSport({ from, to}) {
   }
 }
 
+export function* getUserList() {
+
+  const user = yield select(state => state.auth.user);
+  const response = yield call(AuthReq.getUserList, user.token);
+
+  if (response) {
+
+    yield put(AuthActions.setUserList(response));
+  }
+}
+
 export function* getData({ param1, param2 }) {
 
   const response = yield call(AuthReq.getDataReq, param1, param2);
@@ -72,3 +83,4 @@ export function* getData({ param1, param2 }) {
     yield put(AuthActions.setTest({ response, testData }));
   }
 }
+

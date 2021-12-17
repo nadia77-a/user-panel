@@ -76,7 +76,7 @@ console.log("reportSport",reportSport);
         </Form.Item>
       </Form>
 
-      <Table columns={columns} dataSource={data} />
+      <Table columns={columns} dataSource={reportSport} />
     </>
   );
 };
@@ -84,7 +84,7 @@ console.log("reportSport",reportSport);
 const columns = [
   {
     title: <Trans>User</Trans>,
-    dataIndex: 'user',
+    dataIndex: 'user_name',
     key: 'user',
   },
   {
@@ -94,13 +94,13 @@ const columns = [
   },
   {
     title: <Trans>Tipo</Trans>,
-    dataIndex: 'tipo',
-    key: 'tipo',
+    dataIndex: 'bet_type',
+    key: 'bet_type',
   },
   {
     title: <Trans>Coupon Chiusi</Trans>,
-    key: 'couponChiusi',
-    dataIndex: 'couponChiusi',
+    key: 'closed',
+    dataIndex: 'closed',
   },
   {
     title: <Trans>Coupon</Trans>,
@@ -119,8 +119,8 @@ const columns = [
   },
   {
     title: <Trans>Vinto</Trans>,
-    dataIndex: 'vinto',
-    key: 'vinto',
+    dataIndex: 'maxwin',
+    key: 'maxwin',
   },
   {
     title: <Trans>Utile</Trans>,
@@ -129,8 +129,8 @@ const columns = [
   },
   {
     title: '%',
-    dataIndex: 'percentuale',
-    key: 'percentuale',
+    dataIndex: 'win_amount',
+    key: 'win_amount',
   },
 
   {

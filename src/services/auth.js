@@ -85,3 +85,14 @@ export const getReportSport = (from, to, token) => {
     },
   });
 };
+
+
+export const getUserList= ( token) => {
+  return fetchWrapper(`${endpoint}/`, {
+    body: {
+      token: token,
+      cmd: 'get_userlist',
+       skinname: 'bet-engine',
+    },
+  });
+};

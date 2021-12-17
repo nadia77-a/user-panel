@@ -16,6 +16,8 @@ const { Types, Creators } = createActions({
   setMovimenti:['movimenti'],
   getReportSport:["from","to"],
   setReportSport:['reportSport'],
+  getUserList:[],
+  setUserList:['userList'],
 });
 
 export const AuthTypes = Types;
@@ -27,7 +29,8 @@ const INITIAL_STATE = {
   localStorage.getItem('language') || Object.keys(Bconfig['languages'])[0],
   user: JSON.parse(localStorage.getItem('user')) || null,
   movimenti:[],
-  reportSport:[]
+  reportSport:[],
+  userList:[]
 };
 export const reducer = createReducer(INITIAL_STATE, {
   SET_TEST: (state, { test }) => ({
@@ -66,5 +69,9 @@ export const reducer = createReducer(INITIAL_STATE, {
   SET_REPORT_SPORT: (state, { reportSport }) => ({
     ...state,
     reportSport,
+  }),
+  SET_USER_LIST: (state, { userList }) => ({
+    ...state,
+    userList,
   }),
 });

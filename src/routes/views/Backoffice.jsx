@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 import Header from 'routes/domains/Header';
 import Movimenti from 'routes/domains/Movimenti';
 import ReportSport from 'routes/domains/ReportSport';
+import UserList from 'routes/domains/UserList';
 import { Trans} from '@lingui/macro';
 const { TabPane } = Tabs;
 
@@ -21,7 +22,7 @@ const Backoffice = () => (
         Scommesse
       </TabPane>
       <TabPane tab={<Trans>Lista Utenti</Trans>} key="ListaUtenti" className="container">
-        ListaUtenti
+        <UserList></UserList>
       </TabPane>
       <TabPane tab={<Trans>Report</Trans>} key="Report" className="container">
         Report

@@ -11,7 +11,7 @@ export default function* rootSaga() {
     takeLatest('LOG_OUT', AuthGenerators.logOut),
     takeLatest('GET_MOVIMENTI', AuthGenerators.getMovimenti),
     takeLatest('GET_REPORT_SPORT', AuthGenerators.getReportSport),
-    
+    takeLatest('GET_USER_LIST', AuthGenerators.getUserList),
     // MAIN
   ]);
 }
