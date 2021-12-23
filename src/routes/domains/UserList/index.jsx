@@ -9,7 +9,18 @@ import { Trans } from '@lingui/macro';
 const UserList = ({ getUserList, userList }) => {
   useEffect(() => {getUserList()}, [getUserList]);
   // getUserList();
-console.log("userList",userList);
+// console.log("userList",userList);
+
+var groupBy = function(xs, key) {
+  return xs.reduce(function(rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+};
+
+
+console.log("userList",groupBy(userList,"parent"));
+
   return (
     
 
@@ -20,14 +31,44 @@ console.log("userList",userList);
 
 const columns = [
   {
-    title: <Trans>User</Trans>,
-    dataIndex: 'user_name',
-    key: 'user',
+    title: <Trans>Parent</Trans>,
+    dataIndex: 'parent',
+    key: 'parent',
   },
   {
-    title: <Trans>Account</Trans>,
-    dataIndex: 'account',
-    key: 'account',
+    title: <Trans>Id</Trans>,
+    dataIndex: 'id',
+    key: 'id',
+  },
+  {
+    title: <Trans>Username</Trans>,
+    dataIndex: 'userid',
+    key: 'userid',
+  },
+  {
+    title: <Trans>Tipo</Trans>,
+    dataIndex: 'type',
+    key: 'type',
+  },
+  {
+    title: <Trans>Email</Trans>,
+    dataIndex: 'email',
+    key: 'email',
+  },
+  {
+    title: <Trans>Nome</Trans>,
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: <Trans>Cognome</Trans>,
+    dataIndex: 'lastname',
+    key: 'lastname',
+  },
+  {
+    title: <Trans>Cita</Trans>,
+    dataIndex: 'city',
+    key: 'city',
   }
 ];
 
