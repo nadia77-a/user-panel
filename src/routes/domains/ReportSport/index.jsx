@@ -81,6 +81,11 @@ console.log("reportSport",reportSport);
   );
 };
 
+const betTypes={
+  "V":"versamento",
+  "pre":"prelievo"
+}
+
 const columns = [
   {
     title: <Trans>User</Trans>,
@@ -96,6 +101,7 @@ const columns = [
     title: <Trans>Tipo</Trans>,
     dataIndex: 'bet_type',
     key: 'bet_type',
+    render: (text,row) => <>{betTypes[row["bet_type"]]}</>,
   },
   {
     title: <Trans>Coupon Chiusi</Trans>,
