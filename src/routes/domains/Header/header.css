@@ -1,7 +1,6 @@
 header {
   background-color: var(--accent-bg);
   color: var(--accent-txt);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
@@ -10,17 +9,10 @@ header {
 }
 
 header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 1px 18px 20px -22px #000;
-          box-shadow: 1px 18px 20px -22px #000;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 18px 20px -22px #000;
   height: 100%;
   width: 100% !important;
   max-width: 1280px !important;
@@ -30,11 +22,8 @@ header nav {
 
 header nav .rightDiv {
   padding-right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 1px 0px var(--borderColor1-1);
-          box-shadow: 1px 0px var(--borderColor1-1);
+  box-shadow: 1px 0px var(--borderColor1-1);
 }
 
 header nav .rightDiv .logoutBtn {
@@ -44,56 +33,34 @@ header nav .rightDiv .logoutBtn {
   border: none;
   padding: 0 15px;
   height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 0.3s;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
   color: var(--footerTop-bg);
   cursor: pointer;
 }
 
 header nav .rightDiv .logged-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 header nav .rightDiv .logged-container .userDropDown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
 header nav .rightDiv .logged-container .userDropDown > i {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 40px;
   border-left: 1px solid var(--borderColor1-2);
-  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
-          box-shadow: -1px 0px var(--borderColor1-1);
+  box-shadow: -1px 0px var(--borderColor1-1);
   cursor: pointer;
 }
 
@@ -103,8 +70,6 @@ header nav .rightDiv .logged-container .userDropDown > i:hover {
 }
 
 header nav .rightDiv .logged-container .userDropDown:hover .userDropDown-drop {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -112,48 +77,30 @@ header nav .rightDiv .logged-container .userDropDown-drop {
   position: absolute;
   z-index: 1;
   bottom: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
   background: var(--bg2);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   min-width: 240px;
   display: none;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 header nav .rightDiv .logged-container .userDropDown-drop ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
   width: 100%;
 }
 
 header nav .rightDiv .logged-container .userDropDown-drop li {
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   padding: 0 15px;
   border-bottom: 1px solid var(--accent-txt);
   cursor: pointer;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -167,37 +114,23 @@ header nav .rightDiv .logged-container .userDropDown-drop li:last-child {
 }
 
 header nav .rightDiv .logged-container .balance {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 40px;
 }
 
 header nav .rightDiv .logged-container .balance > i {
   height: 100%;
   width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
   border-left: 1px solid var(--borderColor1-2);
-  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
-          box-shadow: -1px 0px var(--borderColor1-1);
+  box-shadow: -1px 0px var(--borderColor1-1);
 }
 
 header nav .rightDiv .logged-container .balance > i:hover {
@@ -228,18 +161,13 @@ header nav .rightDiv .logged-container .balance .wallet-dropdown {
   right: 0;
   width: 100px;
   text-align: right;
-  -webkit-box-shadow: 2px 2px 9px 0px black;
-          box-shadow: 2px 2px 9px 0px black;
+  box-shadow: 2px 2px 9px 0px black;
   top: 28px;
 }
 
 header nav .rightDiv .logged-container .balance .wallet-dropdown > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 header nav .rightDiv .logged-container .balance .wallet-dropdown > div > span {
@@ -266,37 +194,23 @@ header nav .rightDiv .logged-container > button {
 }
 
 header nav .rightDiv .logged-container .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 header nav .rightDiv .logged-container .icons i {
   height: 100%;
   width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   border-right: 1px solid var(--accent-col);
-  -webkit-box-shadow: 1px 0px var(--accent-txt);
-          box-shadow: 1px 0px var(--accent-txt);
+  box-shadow: 1px 0px var(--accent-txt);
   font-size: 20px;
   opacity: 0.6;
 }
@@ -306,34 +220,21 @@ header nav .rightDiv .logged-container .icons i:hover {
 }
 
 header nav .rightDiv .lang {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 40px;
   border-left: 1px solid var(--borderColor1-2);
   border-right: 1px solid var(--borderColor1-2);
-  -webkit-box-shadow: -1px 0px var(--borderColor1-1);
-          box-shadow: -1px 0px var(--borderColor1-1);
+  box-shadow: -1px 0px var(--borderColor1-1);
   padding: 0 10px;
 }
 
 header nav .rightDiv .lang > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
 }
 
@@ -347,34 +248,22 @@ header nav .rightDiv .lang > div > i {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 header nav .rightDiv .lang .dropDown {
   position: absolute;
   right: 0;
   bottom: 0px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
   z-index: 1;
   width: 100px;
   background: var(--bg2);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
   overflow: hidden;
 }
 
@@ -386,36 +275,27 @@ header nav .rightDiv .lang .dropDown.dropDown:after {
   background: #0000001c;
   display: block;
   content: '';
-  -webkit-transform: translate(10px, 10px);
-          transform: translate(10px, 10px);
+  transform: translate(10px, 10px);
 }
 
 header nav .rightDiv .lang .dropDown-item {
   padding: 3px 10px;
   border-bottom: 1px solid var(--borderColor1-1);
   width: 100%;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
   font-size: 12px;
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 header nav .rightDiv .lang .dropDown-item img {
   width: 16px;
   margin-right: 5px;
   height: 18px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 header nav .rightDiv .lang .dropDown-item:hover {

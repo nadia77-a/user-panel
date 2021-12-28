@@ -99,7 +99,10 @@ const Movimenti = ({ getMovimenti, movimenti }) => {
   );
 };
 
-
+const betTypes={
+  "ver":"versamento",
+  "pre":"prelievo"
+}
 const columns = [
     {
       title: <Trans>Oggeto</Trans>,
@@ -112,12 +115,14 @@ const columns = [
       key: 'causal_name',
     },
     {
-      title: <Trans>Dati</Trans>,
-      dataIndex: 'action',
+      title: <Trans>Tipo Operazione</Trans>,
+      // eslint-disable-next-line no-unused-expressions
+      // dataIndex: 'action',
       key: 'action',
+      render: (text,row) => <>{betTypes[row["action"]]}</>,
     },
     {
-      title: <Trans>Avuti</Trans>,
+      title: <Trans>Importo</Trans>,
       key: 'amount',
       dataIndex: 'amount',
       render: (text,row) => <>{row["amount"]} {row["currency"]}</>,

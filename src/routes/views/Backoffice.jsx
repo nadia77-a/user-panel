@@ -4,6 +4,8 @@ import Header from 'routes/domains/Header';
 import Movimenti from 'routes/domains/Movimenti';
 import ReportSport from 'routes/domains/ReportSport';
 import UserList from 'routes/domains/UserList';
+import Scommesse from 'routes/domains/Scommesse';
+
 import { Trans} from '@lingui/macro';
 const { TabPane } = Tabs;
 
@@ -19,7 +21,7 @@ const Backoffice = () => (
         <Movimenti></Movimenti>
       </TabPane>
       <TabPane tab={<Trans>Scommesse</Trans>} key="Scommesse"  className="container">
-        Scommesse
+        <Scommesse></Scommesse>
       </TabPane>
       <TabPane tab={<Trans>Lista Utenti</Trans>} key="ListaUtenti" className="container">
         <UserList></UserList>
